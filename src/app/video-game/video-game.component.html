@@ -1,24 +1,16 @@
-<div class="container">
+<h1>Welcome to the Video Game Store !</h1>
 
-    <h1>Welcome to the Video Game Store !</h1>
+<p>See all the video games available :</p>
 
-    <p>See all the video games available :</p>
-
-    <div class="row" *ngFor="let game of games">
-        <div class="col s2 m2">
-            <div class="card">
-                <div class="card-image">
-                    <img src="#">
-                    <span class="card-title">{{ game.title }}</span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
-                </div>
-                <div class="card-content">
-                    <p>{{ game.description }}</p>
-                    <p>{{ game.editor }}</p>
-                    <p>{{ game.price }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
+<mat-card class="gameCard">
+    <mat-card-title>Game Title</mat-card-title>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>Description of the game</p>
+        <p>Editor : EA</p>
+        <p>Price : 39£</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button class="addButton">ADD</button>
+    </mat-card-actions>
+</mat-card>
