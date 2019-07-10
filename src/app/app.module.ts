@@ -14,6 +14,8 @@ import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CreateGameComponent } from './create-game/create-game.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,17 +23,19 @@ import { HomePageComponent } from './home-page/home-page.component';
     VideoGameComponent,
     NavbarComponent,
     HomePageComponent,
+    CreateGameComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    FontAwesomeModule,
-    environment.production ? [] : AkitaNgDevtools.forRoot(),
-    AkitaNgRouterStoreModule.forRoot()
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        FontAwesomeModule,
+        environment.production ? [] : AkitaNgDevtools.forRoot(),
+        AkitaNgRouterStoreModule.forRoot(),
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

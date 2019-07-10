@@ -1,15 +1,21 @@
-<div>
+<div class="container">
 
-    <div class="row">
+    <h1>Welcome to the Video Game Store !</h1>
+
+    <p>See all the video games available :</p>
+
+    <div class="row" *ngFor="let game of games">
         <div class="col s2 m2">
             <div class="card">
                 <div class="card-image">
-                    <img src="https://via.placeholder.com/200">
-                    <span class="card-title">Game's Title</span>
+                    <img src="#">
+                    <span class="card-title">{{ game.title }}</span>
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
                 </div>
                 <div class="card-content">
-                    <p>Description of the video game you look.</p>
+                    <p>{{ game.description }}</p>
+                    <p>{{ game.editor }}</p>
+                    <p>{{ game.price }}</p>
                 </div>
             </div>
         </div>
