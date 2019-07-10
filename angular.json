@@ -5,7 +5,11 @@
   "projects": {
     "Video-Game-Catalog": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@datorama/akita:component": {
+          "styleext": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -25,11 +29,9 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/materialize-css/dist/css/materialize.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/materialize-css/dist/js/materialize.min.js"
             ]
           },
           "configurations": {
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Video-Game-Catalog"
+    }
+  },
+  "defaultProject": "Video-Game-Catalog",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
