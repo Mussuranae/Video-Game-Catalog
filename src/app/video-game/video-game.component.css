@@ -1,4 +1,7 @@
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .gameCard {
     max-width: 300px;
 }
-
