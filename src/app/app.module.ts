@@ -16,6 +16,7 @@ import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
 import { CreateGameComponent } from './create-game/create-game.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DetailsGameComponent } from './details-game/details-game.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     VideoGameComponent,
     NavbarComponent,
     CreateGameComponent,
+    DetailsGameComponent,
   ],
     imports: [
         BrowserModule,
