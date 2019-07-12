@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatCardModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +32,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         MatFormFieldModule,
         MatToolbarModule,
         MatCardModule,
+        MatGridListModule,
         MatButtonModule,
         MatCheckboxModule,
         FontAwesomeModule,

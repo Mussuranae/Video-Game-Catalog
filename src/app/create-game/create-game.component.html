@@ -1,20 +1,31 @@
-<form class="example-form">
+<mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile>
+    <h1>Create a new game</h1>
+    </mat-grid-tile>
+</mat-grid-list>
 
-    <mat-form-field class="example-full-width">
-            <input matInput placeholder="Title">
-    </mat-form-field>
+<mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile>
+        <form class="example-form">
 
-    <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Description"></textarea>
-    </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Title">
+            </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-            <input matInput placeholder="Editor">
-    </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="Description"></textarea>
+            </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-            <input matInput placeholder="Price">
-    </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Editor">
+            </mat-form-field>
 
-    <button class="button" type="submit">Create</button>
-</form>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Price">
+            </mat-form-field>
+
+            <button class="button" type="submit">Create</button>
+        </form>
+    </mat-grid-tile>
+</mat-grid-list>
+

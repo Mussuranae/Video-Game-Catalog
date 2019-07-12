@@ -1,5 +1,13 @@
+<!-- <button mat-menu-item routerLink="/">Video Game Store</button>
+<button mat-menu-item routerLink="new">New Game</button>
+<button mat-menu-item routerLink="#">Cart</button>
+-->
+
 <mat-toolbar>
-    <ol><a routerLink="/">Video Game Store</a></ol>
-    <ol><a routerLink="new">New Game</a></ol>
-    <ol><span>Cart</span></ol>
+    <a class="navLink" routerLink="/">Video Game Catalog</a>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <a class="navLink" routerLink="new">Add Game</a>
 </mat-toolbar>
