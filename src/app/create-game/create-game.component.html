@@ -5,7 +5,7 @@
 </mat-grid-list>
 
 <mat-grid-list cols="12" rowHeight="100px">
-    <mat-grid-tile colspan="12" rowspan="4">
+    <mat-grid-tile colspan="12" rowspan="6">
         <form class="example-form">
 
             <mat-form-field class="example-full-width">
@@ -13,7 +13,7 @@
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
-                <textarea matInput placeholder="Description"></textarea>
+                <textarea matInput placeholder="Description" rows="10"></textarea>
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
@@ -24,7 +24,7 @@
                 <input matInput placeholder="Price">
             </mat-form-field>
 
-            <button class="button" type="submit">Create</button>
+            <button mat-flat-button color="warn" type="submit">Create</button>
         </form>
     </mat-grid-tile>
 </mat-grid-list>

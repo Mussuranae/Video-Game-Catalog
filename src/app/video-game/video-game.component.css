@@ -5,3 +5,7 @@ p {
 .gameCard {
     max-width: 300px;
 }
+
+.gameLinkCard {
+    text-decoration: none;
+}
