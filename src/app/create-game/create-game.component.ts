@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-game',
@@ -7,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateGameComponent {
 
-  constructor() {}
+  createGameForm: FormGroup;
 
+  constructor( private formBuilder: FormBuilder) {}
+
+
+  ngOnInit() {
+    this.createGameForm = this.formBuilder.group({
+        title: '',
+        description: '',
+        publisher: '',
+        price: ''
+    });
+  }
 }

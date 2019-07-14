@@ -6,22 +6,26 @@
 
 <mat-grid-list cols="12" rowHeight="100px">
     <mat-grid-tile colspan="12" rowspan="6">
-        <form class="example-form">
+        <form [formGroup]="createGameForm" class="createForm">
 
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Title">
+            <mat-form-field class="form-full-width">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" placeholder="Title" name="title" required>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width">
-                <textarea matInput placeholder="Description" rows="10"></textarea>
+            <mat-form-field class="form-full-width">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description" placeholder="Description" name="description" rows="10" required></textarea>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Editor">
+            <mat-form-field class="form-full-width">
+                <mat-label>Publisher</mat-label>
+                <input matInput formControlName="publisher" placeholder="Publisher" name="publisher" required>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Price">
+            <mat-form-field class="form-full-width">
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price" placeholder="Price" name="price" required>
             </mat-form-field>
 
             <button mat-flat-button color="warn" type="submit">Create</button>
