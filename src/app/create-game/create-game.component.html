@@ -6,7 +6,7 @@
 
 <mat-grid-list cols="12" rowHeight="100px">
     <mat-grid-tile colspan="12" rowspan="10">
-        <form [formGroup]="GameForm" class="createForm">
+        <form [formGroup]="gameForm" class="createForm" (ngSubmit)="onSubmit()">
 
             <mat-form-field class="form-full-width">
                 <label>Title
@@ -56,7 +56,7 @@
                 </label>
             </mat-form-field>
 
-            <button mat-flat-button color="warn" type="submit" (ngSubmit)="onSubmit()">Create</button>
+            <button mat-flat-button color="warn" type="submit">Create</button>
         </form>
     </mat-grid-tile>
 </mat-grid-list>

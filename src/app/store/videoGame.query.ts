@@ -1,11 +1,13 @@
 import { QueryEntity } from '@datorama/akita';
-import { VideoGameStore, VideoGameState } from './videoGame.store';
+import { CatalogGameStore, VideoGameState } from './catalogGame.store';
 import { Game } from '../model/game.model';
+import { Injectable } from '@angular/core';
 
+@Injectable({providedIn: 'root'})
 
-export class VideoGameQuery extends QueryEntity<VideoGameState, Game> {
+export class VideoGameQuery extends QueryEntity<VideoGameState> {
 
-    constructor(protected store: VideoGameStore) {
+    constructor(protected store: CatalogGameStore) {
         super(store);
     }
 }

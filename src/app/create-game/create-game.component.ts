@@ -9,40 +9,45 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './create-game.component.html',
   styleUrls: ['./create-game.component.scss']
 })
-export class CreateGameComponent {
+export class CreateGameComponent implements OnInit {
 
-    GameForm: FormGroup;
+    gameForm: FormGroup;
     game: Game;
 
-  constructor(
-      private formBuilder: FormBuilder,
-      private GameService: GameService,
-      private router: Router
-  ) {}
+    constructor(
+        private formBuilder: FormBuilder,
+        private gameService: GameService,
+        private router: Router
+    ) {
+    }
 
 
-  ngOnInit() {
-    this.GameForm = this.formBuilder.group({
-        title: new FormControl(''),
-        genre: new FormControl(''),
-        developer: new FormControl(''),
-        publisher: new FormControl(''),
-        releaseDate: new FormControl(''),
-        description: new FormControl(''),
-        price: new FormControl(''),
-        languages: new FormControl('')
-    });
-  }
+    ngOnInit() {
+        this.gameForm = this.formBuilder.group({
+            title: new FormControl(''),
+            genre: new FormControl(''),
+            developer: new FormControl(''),
+            publisher: new FormControl(''),
+            releaseDate: new FormControl(''),
+            description: new FormControl(''),
+            price: new FormControl(''),
+            languages: new FormControl(''),
+            pictureURL: new FormControl('')
+        });
+    }
 
-  onSubmit() {
-      if (this.GameForm.valid) {
-          const values = this.GameForm.value;
-          if (this.game.id != null) {
-              this.GameService.updateGame(values);
-          } else {
-              this.GameService.createGame(values);
-          }
-          this.router.navigate(['/']);
-      }
-  }
+    onSubmit() {
+        if (this.gameForm.valid) {
+            const values = this.gameForm.value;
+            if (values.id != null) {
+                this.gameService.updateGame(values);
+                console.log('Jeu mis à jour !');
+            } else {
+                this.gameService.createGame(values);
+                console.log('Jeu créé !');
+            }
+        }
+        this.router.navigate(['/']);
+        console.log('ah ah t\'es dedans !');
+       }
 }

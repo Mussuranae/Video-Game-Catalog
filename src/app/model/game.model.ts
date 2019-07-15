@@ -10,29 +10,5 @@ export interface Game {
     releaseDate: string;
     price: number;
     languages: string;
+    pictureURL: string;
 }
-
-
-/*
-export function createGame({
-    title = '',
-    genre = '',
-    developer = '',
-    publisher = '',
-    description = '',
-    releaseDate = '',
-    price = 0,
-    languages = '',
-    }: Partial<Game>): Game {
-        return {
-            id: guid(),
-            title,
-            genre,
-            developer,
-            publisher,
-            description,
-            releaseDate,
-            price,
-            languages
-        };
- */

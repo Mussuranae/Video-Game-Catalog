@@ -1,4 +1,4 @@
-import { VideoGameStore } from '../store/videoGame.store';
+import { CatalogGameStore } from '../store/catalogGame.store';
 import { VideoGameQuery } from '../store/videoGame.query';
 import { Game } from '../model/game.model';
 import { Injectable } from '@angular/core';
@@ -12,25 +12,25 @@ export class GameService {
     game: Game;
 
     constructor(
-        private VideoGameStore: VideoGameStore,
-        private VideoGameQuery: VideoGameQuery
+        private catalogGameStore: CatalogGameStore,
+        private videoGameQuery: VideoGameQuery
     ) {}
 
     public createGame(game: Game) {
-        this.game.id = guid();
-        this.VideoGameStore.add(game);
+        game.id = guid();
+        this.catalogGameStore.add(game);
     }
 
     public updateGame(game: Game) {
-        this.VideoGameStore.update(game.id, game);
+        this.catalogGameStore.update(game.id, game);
     }
 
     public deleteGame(game: Game) {
-        this.VideoGameStore.remove(game);
+        this.catalogGameStore.remove(game.id);
     }
 
-    public getAll(game: Game) {
-        this.VideoGameQuery.getAll();
+    public getAll() {
+       return this.videoGameQuery.selectAll();
     }
 }
 
