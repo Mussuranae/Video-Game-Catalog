@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../service/game.service';
 import { Game } from '../model/game.model';
-import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-video-game',
@@ -11,15 +10,21 @@ import { ActivatedRoute } from "@angular/router";
 export class GameListComponent implements OnInit {
 
   games: Game[];
+  id;
 
   constructor(
       private gameService: GameService,
-      private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.gameService.getAll().subscribe(games => {
       this.games = games;
+    });
+  }
+
+  showById() {
+    this.gameService.getOneById().subscribe( game => {
+      this.id = game;
     });
   }
 

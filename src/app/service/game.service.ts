@@ -32,5 +32,9 @@ export class GameService {
     public getAll() {
        return this.videoGameQuery.selectAll();
     }
+
+    public getOneById(id) {
+        return this.videoGameQuery.getEntity(id);
+    }
 }
 

@@ -17,3 +17,8 @@ p {
 .gameLinkCard {
     text-decoration: none;
 }
+
+.pictureGame {
+    max-width: 232px;
+    object-fit: cover;
+}

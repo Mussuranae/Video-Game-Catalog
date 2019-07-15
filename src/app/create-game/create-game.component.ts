@@ -48,6 +48,5 @@ export class CreateGameComponent implements OnInit {
             }
         }
         this.router.navigate(['/']);
-        console.log('ah ah t\'es dedans !');
        }
 }

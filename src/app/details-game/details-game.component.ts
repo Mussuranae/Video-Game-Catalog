@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../service/game.service';
+import { Game } from '../model/game.model';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-details-game',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsGameComponent implements OnInit {
 
-  constructor() { }
+  game: Game;
+
+  constructor(
+      private gameService: GameService,
+      private route: ActivatedRoute,
+      private router: Router
+  ) { }
 
   ngOnInit() {
+    /*this.route.paramMap.pipe(
+        switchMap((params: ParamMap) =>
+        this.gameService.getOneById(this.game.id))
+    );*/
+    const id = this.route.snapshot.paramMap.get('id');
+    this.game = this.gameService.getOneById(id);
   }
 
 }

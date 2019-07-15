@@ -30,44 +30,15 @@
             </a>
         </mat-grid-tile>
 
-
-        <mat-grid-tile colspan="3" rowspan="5">
-            <a routerLink="details" class="gameLinkCard">
-                <mat-card class="gameCard">
-                    <mat-card-title>Game Title</mat-card-title>
-                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                    <mat-card-content>
-                        <p>Description of the game</p>
-                        <p>Editor : EA</p>
-                        <p>Price : 39£</p>
-                    </mat-card-content>
-                </mat-card>
-            </a>
-        </mat-grid-tile>
-
-        <mat-grid-tile colspan="3" rowspan="5">
-            <a routerLink="details" class="gameLinkCard">
-                <mat-card class="gameCard">
-                    <mat-card-title>Game Title</mat-card-title>
-                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                    <mat-card-content>
-                        <p>Description of the game</p>
-                        <p>Editor : EA</p>
-                        <p>Price : 39£</p>
-                    </mat-card-content>
-                </mat-card>
-            </a>
-        </mat-grid-tile>
-
         <mat-grid-tile *ngFor="let game of games, index as gameID" colspan="3" rowspan="5">
-            <a routerLink="details" class="gameLinkCard">
+            <a routerLink="game/{{ game.id }}" class="gameLinkCard">
                 <mat-card class="gameCard">
                     <mat-card-title>{{ game.title }}</mat-card-title>
-                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                    <img mat-card-image class="pictureGame" src="{{ game.pictureURL }}" alt="Photo of a Shiba Inu">
                     <mat-card-content>
                         <p>Developer : {{ game.developer }}</p>
                         <p>Publisher : {{ game.publisher }}</p>
-                        <p>Price : {{ game.price }}$</p>
+                        <p>Price : {{ game.price }}€</p>
                     </mat-card-content>
                 </mat-card>
             </a>
