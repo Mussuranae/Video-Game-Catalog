@@ -1,0 +1,19 @@
+.pictureBackground {
+    background-image: url("/assets/Picture/DA_Inquisition.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.textColor {
+    color: #fb1f1f;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.gameCard {
+    max-width: 300px;
+}
+
+.gameLinkCard {
+    text-decoration: none;
+}

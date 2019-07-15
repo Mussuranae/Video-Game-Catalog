@@ -5,30 +5,58 @@
 </mat-grid-list>
 
 <mat-grid-list cols="12" rowHeight="100px">
-    <mat-grid-tile colspan="12" rowspan="6">
-        <form [formGroup]="createGameForm" class="createForm">
+    <mat-grid-tile colspan="12" rowspan="10">
+        <form [formGroup]="GameForm" class="createForm">
 
             <mat-form-field class="form-full-width">
-                <mat-label>Title</mat-label>
+                <label>Title
                 <input matInput formControlName="title" placeholder="Title" name="title" required>
+                </label>
             </mat-form-field>
 
             <mat-form-field class="form-full-width">
-                <mat-label>Description</mat-label>
-                <textarea matInput formControlName="description" placeholder="Description" name="description" rows="10" required></textarea>
+                <label>Genre
+                <input matInput formControlName="genre" placeholder="Genre" name="genre" required>
+                </label>
             </mat-form-field>
 
             <mat-form-field class="form-full-width">
-                <mat-label>Publisher</mat-label>
+                <label>Developer
+                <input matInput formControlName="developer" placeholder="Developer" name="developer" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>Publisher
                 <input matInput formControlName="publisher" placeholder="Publisher" name="publisher" required>
+                </label>
             </mat-form-field>
 
             <mat-form-field class="form-full-width">
-                <mat-label>Price</mat-label>
-                <input matInput formControlName="price" placeholder="Price" name="price" required>
+                <label>Release Date
+                <input matInput formControlName="releaseDate" placeholder="Release Date" name="releaseDate" required>
+                </label>
             </mat-form-field>
 
-            <button mat-flat-button color="warn" type="submit">Create</button>
+            <mat-form-field class="form-full-width">
+                <label>Description
+                <textarea matInput formControlName="description" placeholder="Description" name="description" rows="10" required></textarea>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>Price
+                <input matInput formControlName="price" placeholder="Price" name="price" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>Languages
+                <input matInput formControlName="languages" placeholder="Languages" name="languages" required>
+                </label>
+            </mat-form-field>
+
+            <button mat-flat-button color="warn" type="submit" (ngSubmit)="onSubmit()">Create</button>
         </form>
     </mat-grid-tile>
 </mat-grid-list>

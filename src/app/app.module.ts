@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VideoGameComponent } from './video-game/video-game.component';
+import { GameListComponent } from './game-list/game-list.component';
 
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
@@ -23,7 +23,7 @@ import { DetailsGameComponent } from './details-game/details-game.component';
 @NgModule({
   declarations: [
     AppComponent,
-    VideoGameComponent,
+    GameListComponent,
     CreateGameComponent,
     DetailsGameComponent,
   ],

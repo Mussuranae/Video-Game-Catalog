@@ -2,4 +2,8 @@
 
 body {
     font-family: Roboto;
+    background-image: linear-gradient(#747474, #1D1D1D);
+}
+html {
+    min-height: 100%;
 }

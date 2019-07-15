@@ -1,18 +1,20 @@
 <div class="container">
-    <mat-grid-list cols="1" rowHeight="100px">
-        <mat-grid-tile>
-            <h1>Welcome to the Video Game Store !</h1>
-        </mat-grid-tile>
-    </mat-grid-list>
 
-    <mat-grid-list cols="1" rowHeight="100px">
+    <div class="pictureBackground">
+        <mat-grid-list cols="1" rowHeight="300px">
+            <mat-grid-tile>
+                <h1 class="textColor">Welcome to the Video Game Store !</h1>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <mat-grid-list cols="1" rowHeight="50px">
         <mat-grid-tile>
             <p>See all the video games available :</p>
         </mat-grid-tile>
     </mat-grid-list>
 
     <mat-grid-list cols="12" rowHeight="100px">
-
 
         <mat-grid-tile colspan="3" rowspan="5">
             <a routerLink="details" class="gameLinkCard">
@@ -21,7 +23,7 @@
                     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
                     <mat-card-content>
                         <p>Description of the game</p>
-                        <p>Editor : EA</p>
+                        <p>Publisher : EA</p>
                         <p>Price : 39£</p>
                     </mat-card-content>
                 </mat-card>

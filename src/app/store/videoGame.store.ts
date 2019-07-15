@@ -1,25 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Store, StoreConfig } from '@datorama/akita';
+import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
+import { Game } from '../model/game.model';
 
-export interface VideoGameState {
-    key: string;
-    name: string;
-}
+export interface VideoGameState extends EntityState<Game> { }
 
-export function createInitialState(): VideoGameState {
-    return {
-        key: '',
-        name: string
-    };
-}
 
 @Injectable({ providedIn: 'root' })
 @StoreConfig({ name: 'videoGame' })
 
-export class VideoGameStore extends Store<VideoGameState> {
+export class VideoGameStore extends EntityStore<VideoGameState> {
 
     constructor() {
-        super(createInitialState());
+        super();
     }
 
 }
