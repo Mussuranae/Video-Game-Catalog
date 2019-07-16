@@ -1,15 +1,24 @@
-.pictureBackground {
-    background-image: url("/assets/Picture/DA_Inquisition.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.textColor {
-    color: #fb1f1f;
-}
 p {
     font-family: 'Open Sans', sans-serif;
 }
 
+.pictureBackground {
+    background-image: url("/assets/Picture/DA_Inquisition.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    margin-bottom: 10px;
+}
+.textColor {
+    color: #fb1f1f;
+    text-align: center;
+    transform: translateY(120px);
+}
+
+.introList {
+    text-align: center;
+    color: #FFFFFF;
+}
 .gameLinkCard {
     text-decoration: none;
 }
@@ -17,6 +26,7 @@ p {
 .gameCard {
     width: 300px;
     height: 350px;
+    margin-top: 50px;
 }
 
 .pictureGame {

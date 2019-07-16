@@ -62,8 +62,8 @@
                 </label>
             </mat-form-field>
 
-            <button mat-flat-button color="warn" type="submit">Create</button>
-            <button mat-flat-button color="warn" type="submit">Edit</button>
+            <button mat-flat-button *ngIf="this.id === null" color="warn" type="submit">Create</button>
+            <button mat-flat-button *ngIf="this.id != null" color="warn" type="submit">Edit</button>
         </form>
     </mat-grid-tile>
 </mat-grid-list>

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCheckboxModule, MatFormFieldModule, MatInputModule, MatCardModule, MatGridListModule } from '@angular/material';
+import { MatCheckboxModule, MatFormFieldModule, MatInputModule, MatGridListModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
