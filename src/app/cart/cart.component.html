@@ -1,22 +1,22 @@
-<mat-grid-list cols="1" rowHeight="150px">
-    <mat-grid-tile>
-        <h1>Cart</h1>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="container">
 
-<mat-grid-list cols="12" rowHeight="100px">
+    <div class="row">
+        <div class="col-12">
+            <h1>Cart</h1>
+        </div>
+    </div>
 
-    <mat-grid-tile colspan="3" rowspan="5" *ngFor="let game of gamesWanted">
-        <mat-card class="gameCard">
-            <mat-card-title>{{ game.title }}</mat-card-title>
-            <mat-card-subtitle>Price : {{ game.price }}€</mat-card-subtitle>
-            <mat-card-footer>
-                <button mat-icon-button color="warn" (click)="deleteOfCart(game)">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-footer>
-        </mat-card>
-    </mat-grid-tile>
-
-</mat-grid-list>
-
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let game of gamesWanted">
+            <mat-card class="gameCard">
+                <mat-card-title>{{ game.title }}</mat-card-title>
+                <mat-card-subtitle>Price : {{ game.price }}€</mat-card-subtitle>
+                <mat-card-footer>
+                    <button mat-icon-button color="warn" (click)="deleteOfCart(game)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
+</div>
