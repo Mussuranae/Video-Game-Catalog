@@ -28,8 +28,9 @@ export class DetailsGameComponent implements OnInit {
     this.game = this.gameService.getOneById(id);
   }
 
-  delete() {
+  delete(id) {
     this.gameService.deleteGame(this.game);
+    this.router.navigate(['/']);
   }
 
 }

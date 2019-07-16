@@ -6,7 +6,7 @@
 
     <mat-grid-tile colspan="1" rowspan="5"></mat-grid-tile>
 
-    <mat-grid-tile colspan="6" rowspan="6">
+    <mat-grid-tile colspan="7" rowspan="6">
         <p>{{ game.description }}</p>
     </mat-grid-tile>
 
@@ -22,12 +22,17 @@
             <p>Languages : {{ game.languages }}</p>
         </div>
     </mat-grid-tile>
-    <mat-grid-tile>
+
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="12" rowspan="1">
         <div class="commercialDetails">
             <p>Price : {{ game.price }}€</p>
             <button mat-raised-button routerLink="#" color="warn">Add to Cart</button>
             <button mat-raised-button routerLink="#" color="warn">Edit</button>
-            <button mat-raised-button (click)="delete()" color="warn">Delete</button>
+            <button mat-raised-button (click)="delete(this.game)" color="warn">Delete</button>
         </div>
     </mat-grid-tile>
 
