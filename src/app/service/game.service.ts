@@ -9,8 +9,6 @@ import { guid } from '@datorama/akita';
 
 export class GameService {
 
-    game: Game;
-
     constructor(
         private catalogGameStore: CatalogGameStore,
         private videoGameQuery: VideoGameQuery

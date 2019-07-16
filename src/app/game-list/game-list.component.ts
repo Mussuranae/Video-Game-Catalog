@@ -21,11 +21,4 @@ export class GameListComponent implements OnInit {
       this.games = games;
     });
   }
-
-  showById() {
-    this.gameService.getOneById( game => {
-      this.id = game;
-    });
-  }
-
 }

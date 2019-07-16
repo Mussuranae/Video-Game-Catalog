@@ -1,23 +1,26 @@
 import { Injectable } from '@angular/core';
+import { Game } from '../model/game.model';
+import { CartGameStore } from '../store/cartGame.store';
+import { GameCartQuery } from '../store/gameCart.query';
 
 @Injectable({ providedIn: 'root' })
 
 export class CartService {
 
-    gameWanted = [];
+    constructor(
+        private cartStore: CartGameStore,
+        private cartQuery: GameCartQuery
+    ) {}
 
-    constructor() {}
-
-    addToCart(game) {
-        this.gameWanted.push(game);
+    public addGameWanted(gameWanted: Game) {
+        this.cartStore.add(gameWanted);
     }
 
-    getGameWanted() {
-        return this.gameWanted;
+    public deleteGameWanted(gameWanted: Game) {
+        this.cartStore.remove(gameWanted.id);
     }
 
-    clearCart() {
-        this.gameWanted = [];
-        return this.gameWanted;
+    public getAll() {
+        return this.cartQuery.selectAll();
     }
 }

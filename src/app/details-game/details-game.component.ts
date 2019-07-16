@@ -40,7 +40,7 @@ export class DetailsGameComponent implements OnInit {
   }
 
   addToCart() {
-    this.cartService.addToCart(this.game);
+    this.cartService.addGameWanted(this.game);
     window.alert('Game added to your cart');
   }
 

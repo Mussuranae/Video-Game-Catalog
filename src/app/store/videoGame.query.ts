@@ -1,7 +1,6 @@
 import { QueryEntity } from '@datorama/akita';
-import { CatalogGameStore, VideoGameState } from './catalogGame.store';
-import { Game } from '../model/game.model';
 import { Injectable } from '@angular/core';
+import { CatalogGameStore, VideoGameState } from './catalogGame.store';
 
 @Injectable({providedIn: 'root'})
 

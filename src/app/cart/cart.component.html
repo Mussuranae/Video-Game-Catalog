@@ -6,12 +6,17 @@
 
 <mat-grid-list cols="12" rowHeight="100px">
 
-    <mat-grid-tile colspan="3" rowspan="5" *ngFor="let game of gameWanted">
+    <mat-grid-tile colspan="3" rowspan="5" *ngFor="let game of gamesWanted">
         <mat-card class="gameCard">
             <mat-card-title>{{ game.title }}</mat-card-title>
-            <mat-card-subtitle>Price : {{ game.price }}</mat-card-subtitle>
+            <mat-card-subtitle>Price : {{ game.price }}€</mat-card-subtitle>
+            <mat-card-footer>
+                <button mat-icon-button color="warn" (click)="deleteOfCart(game)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-footer>
         </mat-card>
-
     </mat-grid-tile>
 
 </mat-grid-list>
+

@@ -8,17 +8,20 @@ import { CartService } from '../service/cart.service';
 })
 export class CartComponent implements OnInit {
 
-  gameWanted;
+  gamesWanted;
 
   constructor(
       private cartService: CartService
-  ) {
-    this.gameWanted = this.cartService.getGameWanted();
-  }
+  ) {}
 
   ngOnInit() {
-    console.log(this.gameWanted);
-
+    this.cartService.getAll().subscribe(games => {
+      this.gamesWanted = games;
+    });
   }
 
+  deleteOfCart(game) {
+    this.cartService.deleteGameWanted(game);
+    console.log('jeu supprimé du panier');
+  }
 }
