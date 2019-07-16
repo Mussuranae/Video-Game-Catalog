@@ -13,17 +13,21 @@ export class CreateGameComponent implements OnInit {
 
     gameForm: FormGroup;
     game: Game;
+    id;
 
     constructor(
         private formBuilder: FormBuilder,
         private gameService: GameService,
-        private router: Router
+        private router: Router,
+        private route: ActivatedRoute
     ) {
     }
 
 
     ngOnInit() {
+        this.id = this.route.snapshot.paramMap.get('id');
         this.gameForm = this.formBuilder.group({
+
             title: new FormControl(''),
             genre: new FormControl(''),
             developer: new FormControl(''),
@@ -38,7 +42,10 @@ export class CreateGameComponent implements OnInit {
 
     onSubmit() {
         if (this.gameForm.valid) {
-            const values = this.gameForm.value;
+            const values = {
+                id: this.id,
+                ...this.gameForm.value
+            };
             if (values.id != null) {
                 this.gameService.updateGame(values);
                 console.log('Jeu mis à jour !');

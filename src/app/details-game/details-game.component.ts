@@ -33,4 +33,8 @@ export class DetailsGameComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  editGame(id) {
+    this.router.navigate(['edit/', this.game.id]);
+  }
+
 }
