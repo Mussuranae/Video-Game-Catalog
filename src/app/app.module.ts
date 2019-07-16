@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { CreateGameComponent } from './create-game/create-game.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsGameComponent } from './details-game/details-game.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { DetailsGameComponent } from './details-game/details-game.component';
     GameListComponent,
     CreateGameComponent,
     DetailsGameComponent,
+    CartComponent,
   ],
     imports: [
         BrowserModule,

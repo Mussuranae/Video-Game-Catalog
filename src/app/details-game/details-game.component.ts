@@ -3,6 +3,7 @@ import { GameService } from '../service/game.service';
 import { Game } from '../model/game.model';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-details-game',
@@ -16,7 +17,8 @@ export class DetailsGameComponent implements OnInit {
   constructor(
       private gameService: GameService,
       private route: ActivatedRoute,
-      private router: Router
+      private router: Router,
+      private cartService: CartService
   ) { }
 
   ngOnInit() {
@@ -35,6 +37,11 @@ export class DetailsGameComponent implements OnInit {
 
   editGame(id) {
     this.router.navigate(['edit/', this.game.id]);
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.game);
+    window.alert('Game added to your cart');
   }
 
 }

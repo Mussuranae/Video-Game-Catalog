@@ -30,7 +30,7 @@
     <mat-grid-tile colspan="12" rowspan="1">
         <div class="commercialDetails">
             <p>Price : {{ game.price }}€</p>
-            <button mat-raised-button routerLink="#" color="warn">Add to Cart</button>
+            <button mat-raised-button (click)="addToCart()" color="warn">Add to Cart</button>
             <button mat-raised-button (click)="editGame(this.game)" color="warn">Edit</button>
             <button mat-raised-button (click)="delete(this.game)" color="warn">Delete</button>
         </div>
