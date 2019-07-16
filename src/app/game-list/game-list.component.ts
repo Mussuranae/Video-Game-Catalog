@@ -23,7 +23,7 @@ export class GameListComponent implements OnInit {
   }
 
   showById() {
-    this.gameService.getOneById().subscribe( game => {
+    this.gameService.getOneById( game => {
       this.id = game;
     });
   }

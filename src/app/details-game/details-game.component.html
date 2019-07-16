@@ -20,7 +20,14 @@
             <p>Publisher : {{ game.publisher }}</p>
             <p>Release Date : {{ game.releaseDate }}</p>
             <p>Languages : {{ game.languages }}</p>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="commercialDetails">
             <p>Price : {{ game.price }}€</p>
+            <button mat-raised-button routerLink="#" color="warn">Add to Cart</button>
+            <button mat-raised-button routerLink="#" color="warn">Edit</button>
+            <button mat-raised-button (click)="delete()" color="warn">Delete</button>
         </div>
     </mat-grid-tile>
 
