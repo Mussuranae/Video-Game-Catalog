@@ -8,40 +8,28 @@
         </mat-grid-list>
     </div>
 
-    <mat-grid-list cols="1" rowHeight="50px">
+    <mat-grid-list cols="1" rowHeight="15:1">
         <mat-grid-tile>
             <p>See all the video games available :</p>
         </mat-grid-tile>
     </mat-grid-list>
 
-    <mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-list role="list" cols="12" rowHeight="1:1">
 
-        <mat-grid-tile colspan="3" rowspan="5">
-            <a routerLink="details" class="gameLinkCard">
-                <mat-card class="gameCard">
-                    <mat-card-title>Game Title</mat-card-title>
-                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                    <mat-card-content>
-                        <p>Description of the game</p>
-                        <p>Publisher : EA</p>
-                        <p>Price : 39£</p>
-                    </mat-card-content>
-                </mat-card>
-            </a>
-        </mat-grid-tile>
-
-        <mat-grid-tile *ngFor="let game of games, index as gameID" colspan="3" rowspan="5">
-            <a routerLink="game/{{ game.id }}" class="gameLinkCard">
-                <mat-card class="gameCard">
-                    <mat-card-title>{{ game.title }}</mat-card-title>
-                    <img mat-card-image class="pictureGame" src="{{ game.pictureURL }}" alt="Photo of a Shiba Inu">
-                    <mat-card-content>
-                        <p>Developer : {{ game.developer }}</p>
-                        <p>Publisher : {{ game.publisher }}</p>
-                        <p>Price : {{ game.price }}€</p>
-                    </mat-card-content>
-                </mat-card>
-            </a>
+        <mat-grid-tile role="listitem" *ngFor="let game of games, index as gameID" colspan="3" rowspan="4">
+            <div class="gameCard">
+                <a routerLink="game/{{ game.id }}" class="gameLinkCard">
+                    <mat-card>
+                        <mat-card-title>{{ game.title }}</mat-card-title>
+                        <img mat-card-image class="pictureGame" src="{{ game.pictureURL }}" alt="Picture of the game">
+                        <mat-card-content>
+                            <p>Developer : {{ game.developer }}</p>
+                            <p>Publisher : {{ game.publisher }}</p>
+                            <p>Price : {{ game.price }}€</p>
+                        </mat-card-content>
+                    </mat-card>
+                </a>
+            </div>
         </mat-grid-tile>
 
     </mat-grid-list>

@@ -10,15 +10,17 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-.gameCard {
-    max-width: 300px;
-}
-
 .gameLinkCard {
     text-decoration: none;
 }
 
+.gameCard {
+    width: 300px;
+    height: 350px;
+}
+
 .pictureGame {
-    max-width: 232px;
-    object-fit: cover;
+    max-width: 300px;
+    height: 200px;
+    object-fit: contain;
 }
