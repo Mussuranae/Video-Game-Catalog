@@ -9,3 +9,9 @@
     top: 30px;
     left: 30px;
 }
+
+.cartButton {
+    position: fixed;
+    top : 100px;
+    left: 30px;
+}

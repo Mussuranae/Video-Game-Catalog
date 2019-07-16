@@ -1,1 +1,17 @@
-<p>cart works!</p>
+<mat-grid-list cols="1" rowHeight="150px">
+    <mat-grid-tile>
+        <h1>Cart</h1>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="100px">
+
+    <mat-grid-tile colspan="3" rowspan="5" *ngFor="let game of gameWanted">
+        <mat-card class="gameCard">
+            <mat-card-title>{{ game.title }}</mat-card-title>
+            <mat-card-subtitle>Price : {{ game.price }}</mat-card-subtitle>
+        </mat-card>
+
+    </mat-grid-tile>
+
+</mat-grid-list>
