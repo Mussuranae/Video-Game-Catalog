@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ game.title }}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-2 col-sm-12">
+            <img src="{{ game.pictureURL }}" alt="pictureGame" class="pictureGame">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <p>{{ game.description }}</p>
+        </div>
+
+        <div class="col-lg-3 offset-lg-3 col-md-6 col-sm-12 matTechnicalDetails">
+            <div class="technicalDetails">
+                <p>Title : {{ game.title }}</p>
+                <p>Genre : {{ game.genre }}</p>
+                <p>Developer : {{ game.developer }}</p>
+                <p>Publisher : {{ game.publisher }}</p>
+                <p>Release Date : {{ game.releaseDate }}</p>
+                <p>Languages : {{ game.languages }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row commercialDetails">
+        <div class="col-lg-3 col-md-3 col-sm-2">
+            <span>Price : {{ game.price }}€</span>
+        </div>
+        <div class="col-lg-4 offset-lg-5 col-md-6 offset-md-3 col-sm-10">
+            <button mat-raised-button (click)="addToCart()" color="warn">Add to Cart</button>
+            <button mat-raised-button (click)="editGame(this.game)" color="warn">Edit</button>
+            <button mat-raised-button (click)="delete(this.game)" color="warn">Delete</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+

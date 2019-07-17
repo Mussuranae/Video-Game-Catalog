@@ -1,0 +1,70 @@
+<mat-grid-list cols="1" rowHeight="150px">
+    <mat-grid-tile>
+    <h1>Create a new game</h1>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile colspan="10" rowspan="10">
+        <form [formGroup]="gameForm" class="createForm" (ngSubmit)="onSubmit()">
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="title" placeholder="Title" name="title" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="genre" placeholder="Genre" name="genre" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="developer" placeholder="Developer" name="developer" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="publisher" placeholder="Publisher" name="publisher" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="releaseDate" placeholder="Release Date" name="releaseDate" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <textarea matInput formControlName="description" placeholder="Description" name="description" rows="10" required></textarea>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="price" placeholder="Price" name="price" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="languages" placeholder="Languages" name="languages" required>
+                </label>
+            </mat-form-field>
+
+            <mat-form-field class="form-full-width">
+                <label>
+                <input matInput formControlName="pictureURL" placeholder="Picture URL" name="pictureURL" required>
+                </label>
+            </mat-form-field>
+
+            <button mat-flat-button *ngIf="this.id === null" color="warn" type="submit">Create</button>
+            <button mat-flat-button *ngIf="this.id != null" color="warn" type="submit">Edit</button>
+        </form>
+    </mat-grid-tile>
+</mat-grid-list>
+

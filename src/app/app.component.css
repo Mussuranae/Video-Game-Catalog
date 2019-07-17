@@ -1,0 +1,17 @@
+.addButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.homeLink {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.cartButton {
+    position: fixed;
+    top : 20px;
+    right: 20px;
+}

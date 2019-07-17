@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-12 pictureBackground">
+            <h1 class="textColor">Welcome to the Video Game Store !</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 introList">
+            <p>See all the video games available :</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-2 col-md-6 col-sm-12" *ngFor="let game of games">
+            <div class="gameCard">
+                <a routerLink="game/{{ game.id }}" class="gameLinkCard">
+                    <mat-card>
+                        <mat-card-title>{{ game.title }}</mat-card-title>
+                        <img mat-card-image class="pictureGame" src="{{ game.pictureURL }}" alt="Picture of the game">
+                        <mat-card-content>
+                            <p>Developer : {{ game.developer }}</p>
+                            <p>Publisher : {{ game.publisher }}</p>
+                            <p>Price : {{ game.price }}€</p>
+                        </mat-card-content>
+                    </mat-card>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
