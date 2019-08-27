@@ -16,10 +16,13 @@ import { GameListComponent } from './game-list/game-list.component';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
+import { MatTableModule } from '@angular/material/table';
 import { CreateGameComponent } from './create-game/create-game.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsGameComponent } from './details-game/details-game.component';
 import { CartComponent } from './cart/cart.component';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -29,6 +32,7 @@ import { CartComponent } from './cart/cart.component';
     CreateGameComponent,
     DetailsGameComponent,
     CartComponent,
+    DataTableComponent,
   ],
     imports: [
         BrowserModule,
@@ -46,7 +50,9 @@ import { CartComponent } from './cart/cart.component';
         AkitaNgRouterStoreModule.forRoot(),
         ReactiveFormsModule,
         MatInputModule,
-        MatIconModule
+        MatIconModule,
+        MatTableModule,
+        MatSortModule
     ],
   providers: [],
   bootstrap: [AppComponent]
